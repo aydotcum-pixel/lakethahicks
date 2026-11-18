@@ -1,0 +1,39 @@
+name: Unzip blue site
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+jobs:
+  unzip:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Extract blue index.html from zip
+        run: |
+          if [ -f index.html ]; then
+            echo "index.html already exists, nothing to do."
+            exit 0
+          fi
+          if [ ! -f laketha-hicks-site.zip ]; then
+            echo "No zip found, nothing to do."
+            exit 0
+          fi
+          unzip -o laketha-hicks-site.zip
+          ls -l index.html
+      - name: Commit index.html
+        run: |
+          if [ ! -f index.html ]; then
+            echo "No index.html to commit."
+            exit 0
+          fi
+          git config user.name "aydotcum-pixel"
+          git config user.email "aydotcum-pixel@users.noreply.github.com"
+          git add index.html
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+          git commit -m "Replace index.html with the blue version from laketha-hicks-site.zip"
+          git push
