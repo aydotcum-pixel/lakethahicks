@@ -190,14 +190,34 @@ export function validatePostInput(input) {
   const title = String(input?.title || '').trim();
   const body = String(input?.body || '').trim();
   const date = String(input?.date || '').trim();
+  const tag = ['Faith', 'Beginning again', 'The books'].includes(String(input?.tag || ''))
+    ? String(input.tag) : 'Faith';
+  const excerpt = String(input?.excerpt || '').trim().slice(0, 300);
+  const pullQuote = String(input?.pullQuote || '').trim().slice(0, 300);
   if (!title || title.length > 200) return { error: 'Please add a title of 1 to 200 characters.' };
   if (!body || body.length > 20000) return { error: 'Please write your post, up to 20000 characters.' };
   if (!/^\d{4}-\d{2}-\d{2}$/.test(date)) return { error: 'Please choose a valid date.' };
   const d = new Date(date + 'T00:00:00Z');
   if (Number.isNaN(d.getTime())) return { error: 'Please choose a valid date.' };
-  return { title, body, date };
+  return { title, body, date, tag, excerpt, pullQuote };
 }
 
 export function publicPost(row) {
-  return { id: row.id, slug: row.slug, title: row.title, body: row.body, post_date: row.post_date };
+  return {
+    id: row.id, slug: row.slug, title: row.title, body: row.body, post_date: row.post_date,
+    tag: row.tag || 'Faith', excerpt: row.excerpt || '', pullQuote: row.pullQuote || '',
+  };
+}
+
+// Simple in-memory rate limit for public endpoints (per IP + key).
+// Pages Functions are short-lived, so this is a best-effort guard only;
+// the honeypot and validation below do the real work.
+const _limits = new Map();
+export function rateLimit(key, max, windowMs) {
+  const now = Date.now();
+  const arr = (_limits.get(key) || []).filter((t) => now - t < windowMs);
+  if (arr.length >= max) return false;
+  arr.push(now);
+  _limits.set(key, arr);
+  return true;
 }
