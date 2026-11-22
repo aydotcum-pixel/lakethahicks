@@ -1,46 +1,16 @@
-# Cloudflare Pages _redirects: serve the single-file site for every real path.
-# The client router reads location.pathname, so /books, /about, /blog and
-# /blog/<slug> all load index.html and show the right page. /admin is the
-# private login page (not linked anywhere public). Old #/ links are handled
-# client-side by the router, which replaces them with the real path.
+# Cloudflare Pages _redirects: minimal. Do NOT add SPA rewrites here.
 #
-# WHY THIS FILE IS SHORT NOW
-# The 2026-11-19 version listed both slash forms of every path plus a
-# /* catch-all, 27 rules. The Cloudflare build log for the Nov 22
-# production deployment (commit c211236) parsed only 13 of them as valid
-# and flagged the other 14 as invalid and ignored, for infinite-loop
-# detection: every trailing-slash variant such as /books/ to /index.html
-# and the /* to /index.html catch-all. The trailing-slash form kept
-# working anyway, through Pages built-in SPA fallback, while the
-# no-slash form still loaded Home, so _redirects alone was not fixing
-# the live route. The real fix is functions/_middleware.js, a Pages
-# Function that serves index.html for every known single-page-app path
-# with the request URL unchanged. This file is kept as a fallback with
-# only the rules Pages accepts: the no-slash form of every public path,
-# plus /blog/* for blog slugs and /sitemap.xml.
-#
-# DEPLOY NOTE: this file must sit at the REPO ROOT, next to index.html,
-# sitemap.xml and functions/. It is NOT inside laketha-hicks-site.zip
-# (the zip contains only index.html), so a zip-only deploy does NOT carry
-# it. functions/_middleware.js must also be added to the repo root
-# under functions/, next to api/.
-#
-# ORDER: first match wins. Requests handled by Pages Functions (/api/*)
-# skip _redirects entirely, so the subscribe, login and posts endpoints
-# are not affected by any rule here. /assets/* is not listed: static
-# assets are served directly by Pages.
-/ /index.html 200
-/books /index.html 200
-/about /index.html 200
-/speaking /index.html 200
-/faq /index.html 200
-/blog /index.html 200
-/blog/* /index.html 200
-/contact /index.html 200
-/admin /index.html 200
-/devotional /index.html 200
-/portraits /index.html 200
-/covers /index.html 200
-/journey /index.html 200
-/credentials /index.html 200
+# 2026-11-22 REGRESSION: adding functions/_middleware.js (ASSETS.fetch
+# of /index.html) plus 200 rewrites for every SPA path broke the live
+# site with ERR_TOO_MANY_REDIRECTS on /, /books, /speaking, /blog,
+# /admin, /devotional and /index.html. Evidence from that deploy:
+# /home loaded correctly with URL preserved, and /home had NO _redirects
+# rule and NO middleware handling, so it fell through to Pages built-in
+# SPA fallback, which serves index.html with the URL preserved. The
+# paths WITH a 200 rewrite to /index.html loaded Home (Nov 19-22) or
+# looped (Nov 22, with middleware). Conclusion: the 200 rewrites are
+# the problem, not the client router. So this file now lists NO SPA
+# path rewrites. Pages SPA fallback serves index.html for them.
+# /api/* skips _redirects (Pages Functions). /assets/* is served directly.
+# Keep only the sitemap self-rewrite so it is never caught by fallback.
 /sitemap.xml /sitemap.xml 200
