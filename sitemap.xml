@@ -2,6 +2,8 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://lakethahicks.com/</loc></url>
   <url><loc>https://lakethahicks.com/books</loc></url>
+  <url><loc>https://lakethahicks.com/books/redemption</loc></url>
+  <url><loc>https://lakethahicks.com/books/redemptions-journey</loc></url>
   <url><loc>https://lakethahicks.com/about</loc></url>
   <url><loc>https://lakethahicks.com/speaking</loc></url>
   <url><loc>https://lakethahicks.com/faq</loc></url>
@@ -9,6 +11,10 @@
   <url><loc>https://lakethahicks.com/blog/faith-for-the-season-you-are-in</loc></url>
   <url><loc>https://lakethahicks.com/blog/beginning-again-is-not-failure</loc></url>
   <url><loc>https://lakethahicks.com/blog/why-i-wrote-redemption-and-redemptions-journey</loc></url>
+  <url><loc>https://lakethahicks.com/journal</loc></url>
+  <url><loc>https://lakethahicks.com/journal/faith-for-the-season-you-are-in</loc></url>
+  <url><loc>https://lakethahicks.com/journal/beginning-again-is-not-failure</loc></url>
+  <url><loc>https://lakethahicks.com/journal/why-i-wrote-redemption-and-redemptions-journey</loc></url>
   <url><loc>https://lakethahicks.com/contact</loc></url>
   <url><loc>https://lakethahicks.com/devotional</loc></url>
 </urlset>
