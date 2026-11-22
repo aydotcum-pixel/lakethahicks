@@ -19,9 +19,9 @@ export async function onRequestPut(context) {
   if (!existing) return json({ ok: false, error: 'Post not found.' }, 404);
   const slug = valid.title === existing.title ? existing.slug : await uniqueSlug(context.env, slugify(valid.title));
   await context.env.DB.prepare(
-    'UPDATE posts SET slug = ?, title = ?, body = ?, post_date = ?, updated_at = ? WHERE id = ?'
-  ).bind(slug, valid.title, valid.body, valid.date, Date.now(), id).run();
-  const row = await context.env.DB.prepare('SELECT id, slug, title, body, post_date FROM posts WHERE id = ?')
+    'UPDATE posts SET slug = ?, title = ?, body = ?, post_date = ?, tag = ?, excerpt = ?, pullQuote = ?, updated_at = ? WHERE id = ?'
+  ).bind(slug, valid.title, valid.body, valid.date, valid.tag, valid.excerpt, valid.pullQuote, Date.now(), id).run();
+  const row = await context.env.DB.prepare('SELECT id, slug, title, body, post_date, tag, excerpt, pullQuote FROM posts WHERE id = ?')
     .bind(id).first();
   return json({ ok: true, post: publicPost(row) });
 }
