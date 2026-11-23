@@ -1164,3 +1164,20 @@ body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:200;op
   .btn-row .btn{flex:1 1 100%}
   .page-head-art .fan img{width:72px}
 }
+
+/* ==========================================================================
+   Lifelike butterflies (public/js/butterflies.js)
+   ========================================================================== */
+.rb{position:absolute;left:0;top:0;width:0;height:0;perspective:720px;will-change:transform,opacity;pointer-events:none}
+.rb-tilt{position:absolute;left:0;top:0;width:var(--span);height:calc(var(--span) * .5);transform-style:preserve-3d;transform-origin:50% 50%}
+.rb-wing{position:absolute;top:0;width:50%;height:100%;transform-style:preserve-3d}
+.rb-l{left:0;transform-origin:100% 50%}
+.rb-r{left:50%;transform-origin:0 50%}
+.rb-wing img,.rb-sheen{position:absolute;inset:0;width:100%;height:100%;display:block;backface-visibility:hidden;-webkit-backface-visibility:hidden;user-select:none}
+.rb-under{transform:rotateY(180deg)}
+.rb-sheen{background:linear-gradient(118deg,rgba(150,225,255,0) 28%,rgba(170,235,255,.85) 48%,rgba(120,200,255,0) 66%);mix-blend-mode:screen;opacity:calc(var(--sheen,0) * .75);-webkit-mask-size:100% 100%;mask-size:100% 100%;transform:translateZ(.1px)}
+.rb-body{position:absolute;left:50%;top:50%;height:96%;width:auto;transform:translate(-50%,-56%) translateZ(1px);filter:drop-shadow(0 1px 1px rgba(0,0,0,.25))}
+.rb-shadow{position:absolute;left:0;top:0;width:var(--span);height:calc(var(--span) * .26);border-radius:50%;background:radial-gradient(closest-side,rgba(16,27,63,.55),rgba(16,27,63,0));filter:blur(3px);transform-origin:50% 50%}
+.rb.resting .rb-shadow{filter:blur(2px)}
+.garden{position:absolute;left:0;top:0;width:100%;height:0;z-index:60;pointer-events:none;overflow:visible}
+.garden{overflow:hidden;contain:layout paint}

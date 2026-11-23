@@ -54,137 +54,15 @@
     run();
   }
 
-  // ---------------------------------------------------------------- the butterfly garden
-  // Released butterflies fly to a resting place on the page (a heading, a book,
-  // a photo), settle with slow wingbeats, and lift off when the cursor comes close.
-  const garden = document.createElement('div');
-  garden.className = 'garden'; garden.setAttribute('aria-hidden', 'true');
-  document.body.appendChild(garden);
-  const PAL = [['#2451c7', '#9cc0ff'], ['#3b6fe0', '#dce6fb'], ['#1e3a8a', '#7fa7f5'], ['#4f86f7', '#ffffff'], ['#2a5bd7', '#e2c27a'], ['#5b8def', '#dce6fb']];
-  const WL = ([a, b]) => `<svg viewBox="0 0 30 50"><path d="M30 25 C22 4 2 -1 2 13 C2 25 17 29 30 25Z" fill="${a}"/><path d="M30 24 C24 12 12 9 10 15 C9 21 19 24 30 24Z" fill="${b}" opacity=".55"/><path d="M30 26 C19 30 9 41 16 47 C23 51 29 38 30 27Z" fill="${a}" opacity=".88"/><circle cx="11" cy="12" r="2.4" fill="#e2c27a"/></svg>`;
-  const WR = ([a, b]) => `<svg viewBox="30 0 30 50"><path d="M30 25 C38 4 58 -1 58 13 C58 25 43 29 30 25Z" fill="${a}"/><path d="M30 24 C36 12 48 9 50 15 C51 21 41 24 30 24Z" fill="${b}" opacity=".55"/><path d="M30 26 C41 30 51 41 44 47 C37 51 31 38 30 27Z" fill="${a}" opacity=".88"/><circle cx="49" cy="12" r="2.4" fill="#e2c27a"/></svg>`;
-  const svgFor = (pal, size, flap) => `<span class="bf3d" style="--w:${size}px;--flap:${flap}s"><span class="wing wl">${WL(pal)}</span><span class="wing wr">${WR(pal)}</span><span class="body"></span></span>`;
-
-  const flyers = [];
-  const MAX_RESTING = 14;
-  let rafOn = false;
-  const pointer = { x: -999, y: -999 };
-
-  function perchesInView() {
-    const top = scrollY, bottom = scrollY + innerHeight;
-    return $$('[data-perch], main .h2, .post-card-img, .arch, .shelf-title').filter(el => {
-      const r = el.getBoundingClientRect();
-      if (!r.width || r.bottom < 40 || r.top > innerHeight - 40) return false;
-      return getComputedStyle(el).visibility !== 'hidden';
-    }).map(el => el.getBoundingClientRect()).map(r => ({ x: r.left + scrollX, y: r.top + scrollY, w: r.width })).filter(p => p.y > top && p.y < bottom);
-  }
-  function pickSpot(avoid) {
-    const ps = perchesInView();
-    if (!ps.length) return null;
-    for (let tries = 0; tries < 14; tries++) {
-      const p = ps[(Math.random() * ps.length) | 0];
-      const x = p.x + p.w * (0.12 + Math.random() * 0.76);
-      const crowded = flyers.some(f => (f.mode === 'rest' || (f.target && f.mode === 'fly')) && Math.hypot((f.target ? f.target.x : f.x) - x, (f.target ? f.target.y : f.y) - p.y) < 90);
-      if (!crowded && (!avoid || Math.hypot(x - avoid.x, p.y - avoid.y) > 160)) return { x, y: p.y };
-    }
-    return null;
-  }
-  function make(x, y, size) {
-    const el = document.createElement('div');
-    el.className = 'flyer';
-    el.innerHTML = svgFor(PAL[(Math.random() * PAL.length) | 0], size | 0, (0.15 + Math.random() * 0.08).toFixed(2));
-    el.style.setProperty('--rest', (1.4 + Math.random() * 1.4).toFixed(2) + 's');
-    garden.appendChild(el);
-    return { el, x, y, vx: 0, vy: 0, size, t: 0, seed: Math.random() * 1000, mode: 'fly', target: null, life: 0, op: 1, rot: 0 };
-  }
-  function place(f) {
-    f.el.style.opacity = f.op;
-    f.el.style.transform = `translate3d(${f.x - f.size / 2}px,${f.y - f.size * .84}px,0) rotate(${f.rot}deg)`;
-  }
-  function release(px, py, burst) {
-    const f = make(px, py, 30 + Math.random() * 22);
-    const ang = -Math.PI / 2 + (Math.random() - .5) * (burst ? 2.4 : 1.2);
-    f.vx = Math.cos(ang) * 4; f.vy = Math.sin(ang) * 4;
-    f.target = pickSpot({ x: px, y: py });
-    f.wander = 70 + Math.random() * 60; // frames of free flight before heading home
-    if (!f.target) f.mode = 'away';
-    flyers.push(f);
-    const resting = flyers.filter(x => x.mode === 'rest');
-    if (resting.length > MAX_RESTING) liftOff(resting[0], true);
-    wake();
-  }
-  function liftOff(f, leave) {
-    f.mode = leave ? 'away' : 'fly';
-    f.el.classList.remove('resting');
-    const dx = f.x - pointer.x, dy = f.y - pointer.y, d = Math.hypot(dx, dy) || 1;
-    f.vx = dx / d * 4 + (Math.random() - .5) * 2; f.vy = -3.5 - Math.random() * 2;
-    f.t = 0; f.wander = 40 + Math.random() * 40;
-    f.target = leave ? null : pickSpot(pointer);
-    if (!f.target) f.mode = 'away';
-    wake();
-  }
-  function wake() { if (!rafOn) { rafOn = true; requestAnimationFrame(step); } }
-  function step() {
-    let active = 0;
-    for (let i = flyers.length - 1; i >= 0; i--) {
-      const f = flyers[i];
-      if (f.mode === 'rest') continue;
-      active++; f.t++;
-      const flutterX = Math.sin(f.t * .09 + f.seed) * .35, flutterY = Math.sin(f.t * .23 + f.seed) * .55;
-      if (f.mode === 'fly' && f.target && f.t > f.wander) {
-        const dx = f.target.x - f.x, dy = f.target.y - f.y, d = Math.hypot(dx, dy);
-        const want = Math.min(3.2, d / 18 + .4);
-        f.vx += ((dx / (d || 1)) * want - f.vx) * .06;
-        f.vy += ((dy / (d || 1)) * want - f.vy) * .06;
-        if (d < 3) {
-          f.mode = 'rest'; f.x = f.target.x; f.y = f.target.y; f.rot = (Math.random() - .5) * 24;
-          f.el.classList.add('resting'); place(f); continue;
-        }
-      } else {
-        f.vx += Math.sin(f.t * .045 + f.seed) * .12; f.vy += Math.cos(f.t * .06 + f.seed) * .06 - .02;
-        f.vx *= .985; f.vy *= .985;
-      }
-      f.x += f.vx + flutterX; f.y += f.vy + flutterY;
-      f.rot = Math.max(-30, Math.min(30, f.vx * 8));
-      if (f.mode === 'away') {
-        f.life++;
-        if (f.life > 200) f.op = Math.max(0, 1 - (f.life - 200) / 60);
-        if (f.op <= 0 || f.y < scrollY - 140) { f.el.remove(); flyers.splice(i, 1); continue; }
-      } else if (f.t > 900) { f.mode = 'away'; }
-      place(f);
-    }
-    if (active) requestAnimationFrame(step); else rafOn = false;
-  }
-  // a hand coming close makes resting butterflies lift off
-  addEventListener('pointermove', e => {
-    pointer.x = e.pageX; pointer.y = e.pageY;
-    for (const f of flyers) if (f.mode === 'rest' && Math.hypot(f.x - pointer.x, f.y - f.size * .4 - pointer.y) < 70) liftOff(f, false);
-  }, { passive: true });
-  addEventListener('pointerdown', e => {
-    pointer.x = e.pageX; pointer.y = e.pageY;
-    for (const f of flyers) if (f.mode === 'rest' && Math.hypot(f.x - pointer.x, f.y - pointer.y) < 90) liftOff(f, false);
-  }, { passive: true });
-
-  // a few butterflies are already resting when the page opens
-  if (!reduce) setTimeout(() => {
-    const n = $('.hero') ? 3 : 2;
-    for (let i = 0; i < n; i++) {
-      const spot = pickSpot(); if (!spot) break;
-      const f = make(spot.x, spot.y, 26 + Math.random() * 14);
-      f.mode = 'rest'; f.rot = (Math.random() - .5) * 24; f.el.classList.add('resting'); f.op = 0; place(f);
-      flyers.push(f);
-      setTimeout(() => { f.el.style.transition = 'opacity 1.2s ease'; f.op = 1; place(f); }, 200 + i * 450);
-    }
-  }, 1400);
-
+  // ---------------------------------------------------------------- butterflies: see butterflies.js
   function setTotals(n) {
     $$('[data-bf-total]').forEach(el => {
       el.textContent = Number(n).toLocaleString('en-US');
       el.classList.remove('pop'); void el.offsetWidth; el.classList.add('pop');
     });
   }
-  const spawn = (cx, cy, burst) => { if (!reduce) release(cx + scrollX, cy + scrollY, burst); };
-  window.LH = Object.assign(window.LH || {}, { spawn: (x, y) => { for (let i = 0; i < 5; i++) setTimeout(() => spawn(x + (Math.random() - .5) * 80, y, true), i * 90); } });
+  const spawn = (cx, cy, burst) => { if (!reduce && window.Butterflies) window.Butterflies.release(cx, cy, { burst }); };
+  window.LH = Object.assign(window.LH || {}, { spawn: (x, y) => { if (window.Butterflies) window.Butterflies.flutter(x, y, 5); } });
   $$('[data-release]').forEach(b => b.addEventListener('click', async e => {
     const r = b.getBoundingClientRect();
     const x = e.clientX || r.left + r.width / 2, y = e.clientY || r.top + r.height / 2;
@@ -194,7 +72,7 @@
       const { count } = await res.json();
       if (res.ok) {
         setTotals(count);
-        if (count % 10 === 0) { for (let i = 0; i < 9; i++) setTimeout(() => spawn(x + (Math.random() - .5) * 60, y, true), i * 70); say(`A flutter of butterflies! ${count} released by readers.`); }
+        if (count % 10 === 0) { if (window.Butterflies) window.Butterflies.flutter(x, y, 7); say(`A flutter of butterflies! ${count} released by readers.`); }
         else say(`Butterfly released. ${count} released by readers.`);
       } else say('Butterfly released.');
     } catch { say('Butterfly released.'); }

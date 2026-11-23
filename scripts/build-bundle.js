@@ -9,7 +9,7 @@ const rd = (...p) => fs.readFileSync(path.join(root, ...p), 'utf8');
 const journalDir = path.join(root, 'content', 'journal');
 const crypto = require('crypto');
 // A fingerprint of the CSS and JS, added to their links (?v=...) so phones always load the newest styles.
-const assetVersion = crypto.createHash('sha256').update(['css/site.css', 'css/admin.css', 'js/site.js', 'js/admin.js'].map(f => rd('public', ...f.split('/'))).join('\n')).digest('hex').slice(0, 10);
+const assetVersion = crypto.createHash('sha256').update(['css/site.css', 'css/admin.css', 'js/site.js', 'js/admin.js', 'js/butterflies.js'].map(f => rd('public', ...f.split('/'))).join('\n')).digest('hex').slice(0, 10);
 const out = {
   assetVersion,
   site: JSON.parse(rd('content', 'site-content.json')),
