@@ -2,10 +2,917 @@
   {
     "slug": "chosen",
     "word": "Chosen",
-    "definitions": ["Selected or marked for favor or special privilege", "Selected from several"],
-    "readings": [["Monday", "Jeremiah 1"], ["Tuesday", "Matthew 22:1-14"], ["Wednesday", "Luke 19:1-10"], ["Thursday", "Luke 6:12-26"], ["Friday", "Isaiah 43:1-13"]],
+    "definitions": [
+      [
+        "Chosen",
+        "Selected or marked for favor or special privilege"
+      ],
+      [
+        "Chosen",
+        "Selected from several"
+      ]
+    ],
+    "readings": [
+      [
+        "Monday",
+        "Jeremiah 1"
+      ],
+      [
+        "Tuesday",
+        "Matthew 22:1-14"
+      ],
+      [
+        "Wednesday",
+        "Luke 19:1-10"
+      ],
+      [
+        "Thursday",
+        "Luke 6:12-26"
+      ],
+      [
+        "Friday",
+        "Isaiah 43:1-13"
+      ]
+    ],
     "thought": "When God has selected you, it doesn't matter who else has rejected or neglected you. God's favor outweighs all opposition.",
-    "source": "Laketha's weekly lesson, first shared by text message in 2023; sent to Chef Ay 2026-11-22",
-    "date": "2023-01-02"
+    "date": "2023-01-08"
+  },
+  {
+    "slug": "redeemed",
+    "word": "Redeemed",
+    "definitions": [
+      [
+        "Redeem",
+        "To release from blame or debt; clear"
+      ],
+      [
+        "Redeem",
+        "To free from the consequences of sin"
+      ],
+      [
+        "Redeem",
+        "To change for the better; reform"
+      ]
+    ],
+    "readings": [
+      [
+        "Monday",
+        "Psalm 107"
+      ],
+      [
+        "Tuesday",
+        "Isaiah 44"
+      ],
+      [
+        "Wednesday",
+        "Titus 2"
+      ],
+      [
+        "Thursday",
+        "2 Chronicles 33:1-20"
+      ],
+      [
+        "Friday",
+        "Luke 15:1-10"
+      ]
+    ],
+    "thought": "No matter how far you've gone, you can always turn around.",
+    "date": "2023-01-15"
+  },
+  {
+    "slug": "leaning-in",
+    "word": "Leaning In",
+    "definitions": [
+      [
+        "Leaning in",
+        "To persevere in spite of risk or difficulty"
+      ]
+    ],
+    "readings": [
+      [
+        "Monday",
+        "1 Timothy 4"
+      ],
+      [
+        "Tuesday",
+        "Hebrews 6:1-12"
+      ],
+      [
+        "Wednesday",
+        "Psalm 40"
+      ],
+      [
+        "Thursday",
+        "Psalm 71"
+      ],
+      [
+        "Friday",
+        "1 Chronicles 4:9-10"
+      ]
+    ],
+    "thought": "Traditionally lean in has been used in the context of sports to mean “to shift one's body weight forward or toward someone or something.” In water and snow sports, you can lean into a wave, the wind, a slope, or a turn. You can lean into a pitch, or throw, or catch as well. In life when the unexpected, inexplicable, and impossible presents itself you can lean into God.",
+    "date": "2023-01-22"
+  },
+  {
+    "slug": "dont-miss-the-message",
+    "word": "Don't Miss the Message!",
+    "subtitle": "Are you preoccupied?",
+    "definitions": [
+      [
+        "Miss",
+        "Fail to notice, hear, or understand"
+      ],
+      [
+        "Message",
+        "A piece of information that is sent or given to someone"
+      ],
+      [
+        "Preoccupied",
+        "Thinking or worrying about something too much"
+      ],
+      [
+        "Preoccupied",
+        "Engrossed in thought; distracted"
+      ]
+    ],
+    "readings": [
+      [
+        "Monday",
+        "Matthew 13:3-23"
+      ],
+      [
+        "Tuesday",
+        "Matthew 16:1-12"
+      ],
+      [
+        "Wednesday",
+        "John 10:1-21"
+      ],
+      [
+        "Thursday",
+        "Judges 13"
+      ],
+      [
+        "Friday",
+        "Matthew 1:18-25"
+      ]
+    ],
+    "thought": "We often miss hearing God's voice simply because we aren't paying attention.",
+    "thoughtCite": "Rick Warren",
+    "date": "2023-01-29"
+  },
+  {
+    "slug": "trust-the-process",
+    "word": "Trust the Process",
+    "definitions": [
+      [
+        "Process",
+        "A series of actions or steps taken in order to achieve a particular end"
+      ]
+    ],
+    "readings": [
+      [
+        "Monday",
+        "Psalm 105"
+      ],
+      [
+        "Tuesday",
+        "Luke 1"
+      ],
+      [
+        "Wednesday",
+        "Numbers 21:1-9"
+      ],
+      [
+        "Thursday",
+        "Ruth 3 & Ruth 4:1-16"
+      ],
+      [
+        "Friday",
+        "1 Peter 4"
+      ]
+    ],
+    "thought": "Sometimes what God requires of you may not make sense, sometimes you may not see a way out, and sometimes what you're asking God to do may appear to have gone unheard, in these moments, just trust the process.",
+    "date": "2023-02-05"
+  },
+  {
+    "slug": "caught-on-purpose",
+    "word": "Caught on Purpose",
+    "definitions": [],
+    "readings": [
+      [
+        "Monday",
+        "Genesis 22:1-19"
+      ],
+      [
+        "Tuesday",
+        "Jonah 1:17, Jonah 2"
+      ],
+      [
+        "Wednesday",
+        "Matthew 14:22-33"
+      ],
+      [
+        "Thursday",
+        "Judges 3"
+      ],
+      [
+        "Friday",
+        "Genesis 39"
+      ]
+    ],
+    "thought": "God is preparing you for greater things.",
+    "closingVerse": {
+      "ref": "Romans 8:28",
+      "version": "AMP",
+      "text": "And we know [with great confidence] that God [who is deeply concerned about us] causes all things to work together [as a plan] for good for those who love God, to those who are called according to His plan and purpose."
+    },
+    "date": "2023-02-12"
+  },
+  {
+    "slug": "god-of-the-impossible",
+    "word": "God of the Impossible",
+    "definitions": [
+      [
+        "Impossible",
+        "Felt to be incapable of being done, attained, or fulfilled: insuperably difficult"
+      ]
+    ],
+    "readings": [
+      [
+        "Monday",
+        "Ezekiel 37"
+      ],
+      [
+        "Tuesday",
+        "1 Kings 18"
+      ],
+      [
+        "Wednesday",
+        "John 2:1-12"
+      ],
+      [
+        "Thursday",
+        "Matthew 17:14-27"
+      ],
+      [
+        "Friday",
+        "John 6:1-22"
+      ]
+    ],
+    "thought": "And he said, The things which are impossible with men are possible with God.",
+    "thoughtCite": "Luke 18:27 (KJV)",
+    "date": "2023-02-19"
+  },
+  {
+    "slug": "the-watchman",
+    "word": "The Watchman",
+    "definitions": [
+      [
+        "Watchman",
+        "To look out or about, keep watch. To peer into the distance. To observe, await, behold."
+      ]
+    ],
+    "readings": [
+      [
+        "Monday",
+        "Isaiah 21"
+      ],
+      [
+        "Tuesday",
+        "Ezekiel 33"
+      ],
+      [
+        "Wednesday",
+        "2 Kings 9:1-29"
+      ],
+      [
+        "Thursday",
+        "2 Samuel 18"
+      ],
+      [
+        "Friday",
+        "Jeremiah 6"
+      ]
+    ],
+    "thought": "In the Bible watchmen were responsible for warning the cities of impending attacks from the enemy. You are the watchmen over your lives, your jobs, family, friends, church, neighbors, city, and state. You are a watchman but when God seeks you will he find you on your post?",
+    "date": "2023-03-05"
+  },
+  {
+    "slug": "el-roi",
+    "word": "El Roi",
+    "subtitle": "The God Who Sees Me",
+    "definitions": [],
+    "keyVerse": {
+      "ref": "Genesis 16:13-14",
+      "version": "KJV",
+      "text": "And she called the name of the LORD that spake unto her, Thou God seest me: for she said, Have I also here looked after him that seeth me? Wherefore the well was called Beer-lahai-roi; behold, it is between Kadesh and Bered."
+    },
+    "readings": [
+      [
+        "Monday",
+        "Job 1:1-12",
+        "God sees how you live"
+      ],
+      [
+        "Tuesday",
+        "Acts 12",
+        "God sees your situation"
+      ],
+      [
+        "Wednesday",
+        "Exodus 33, John 10:3, Isaiah 49:16",
+        "He knows your name"
+      ],
+      [
+        "Thursday",
+        "Matthew 6",
+        "He sees you in your private moments; He sees your needs"
+      ],
+      [
+        "Friday",
+        "Luke 7:11-18",
+        "God sees you when it seems as if all is lost"
+      ]
+    ],
+    "thought": "No matter what situation you find yourself in, moments when you feel you've gone too far, or feel alone. Know that God sees you because God is omnipresent, that is, present everywhere.",
+    "date": "2023-03-12"
+  },
+  {
+    "slug": "the-characteristics-of-god",
+    "word": "The Characteristics of God",
+    "definitions": [
+      [
+        "Omnipresent",
+        "Present in all places at all times."
+      ],
+      [
+        "Empathetic",
+        "Showing an ability to understand and share the feelings of another. Having the ability to imagine how someone else feels."
+      ],
+      [
+        "Sovereign",
+        "To have sovereign power is to have absolute power, that is, power that cannot be checked by anyone or anything."
+      ],
+      [
+        "Incomparable",
+        "Unable to be compared; totally different in nature or extent."
+      ],
+      [
+        "Love",
+        "To be deeply committed and connected to someone or something."
+      ],
+      [
+        "Merciful",
+        "Compassionate. Showing undeserved forgiveness or kindness."
+      ]
+    ],
+    "readings": [
+      [
+        "Monday",
+        "Psalm 139",
+        "Omnipresent"
+      ],
+      [
+        "Tuesday",
+        "Hebrews 4:13-16, John 11:32-44",
+        "Empathetic"
+      ],
+      [
+        "Wednesday",
+        "Jeremiah 10:1-16",
+        "Sovereign"
+      ],
+      [
+        "Thursday",
+        "Isaiah 46",
+        "Incomparable"
+      ],
+      [
+        "Friday",
+        "Romans 8",
+        "Love"
+      ]
+    ],
+    "thought": "God is merciful!",
+    "closingVerse": {
+      "ref": "Psalm 145:8-9",
+      "version": "NIV",
+      "text": "The Lord is gracious and compassionate, slow to anger and rich in love. The Lord is good to all; he has compassion on all he has made."
+    },
+    "date": "2023-03-19"
+  },
+  {
+    "slug": "know-your-battle-level",
+    "word": "Know Your Battle Level",
+    "definitions": [
+      [
+        "Know",
+        "Be aware of through observation, inquiry, or information."
+      ],
+      [
+        "Battle",
+        "A struggle to succeed or survive"
+      ],
+      [
+        "Battle",
+        "To contend with full strength, vigor, skill, or resources."
+      ]
+    ],
+    "keyVerse": {
+      "ref": "Ephesians 6:12",
+      "version": "KJV",
+      "text": "For we wrestle not against flesh and blood, but against principalities, against powers, against the rulers of the darkness of this world, against spiritual wickedness in high places."
+    },
+    "readings": [
+      [
+        "Monday",
+        "1 Samuel 17"
+      ],
+      [
+        "Tuesday",
+        "Judges 16"
+      ],
+      [
+        "Wednesday",
+        "Numbers 13"
+      ],
+      [
+        "Thursday",
+        "Judges 7"
+      ],
+      [
+        "Friday",
+        "Isaiah 36 & 37"
+      ]
+    ],
+    "thought": "Knowing your battle level means that you know what life and God has equipped you to fight. As you read this week’s lesson notice that there were moments when battles were fought alone, some people couldn't go into battle with them, some saw themselves as less than/unable to win, and others sought God when the battle was too great. Remember Philippians 4:13 as you face the battles of life, for with God your battle level is different than when you are fighting alone.",
+    "date": "2023-03-26"
+  },
+  {
+    "slug": "the-posture-of-prayer",
+    "word": "The Posture of Prayer",
+    "definitions": [
+      [
+        "Posture",
+        "The position in which someone holds their body when standing or sitting."
+      ],
+      [
+        "Posture",
+        "A particular way of dealing with or considering something; an approach or attitude."
+      ]
+    ],
+    "readings": [
+      [
+        "Monday",
+        "2 Chronicles 6:12-42"
+      ],
+      [
+        "Tuesday",
+        "Acts 4"
+      ],
+      [
+        "Wednesday",
+        "Joshua 10:1-27"
+      ],
+      [
+        "Thursday",
+        "2 Kings 6:1-23"
+      ],
+      [
+        "Friday",
+        "Mark 9:14-30"
+      ]
+    ],
+    "thought": "The most important posture in prayer is your heart.",
+    "thoughtCite": "Luke 18:9-14",
+    "date": "2023-04-02"
+  },
+  {
+    "slug": "god-will-never-leave-you",
+    "word": "God Will Never Leave You Nor Forsake You",
+    "definitions": [
+      [
+        "Leave",
+        "To depart from permanently. To go away from someone or something."
+      ],
+      [
+        "Forsake",
+        "To quit or leave entirely; abandon; desert."
+      ],
+      [
+        "Forsake",
+        "To leave someone, or to stop helping or taking care of them, when they still need you."
+      ]
+    ],
+    "readings": [
+      [
+        "Monday",
+        "Matthew 28"
+      ],
+      [
+        "Tuesday",
+        "Deuteronomy 31:1-8"
+      ],
+      [
+        "Wednesday",
+        "Hebrews 13:1-8"
+      ],
+      [
+        "Thursday",
+        "Psalm 73"
+      ],
+      [
+        "Friday",
+        "Psalm 94"
+      ]
+    ],
+    "thought": "The Lord is with me; I will not be afraid. What can mere mortals do to me?",
+    "thoughtCite": "Psalm 118:6 (NIV)",
+    "date": "2023-04-09"
+  },
+  {
+    "slug": "the-anointing-makes-the-difference",
+    "word": "The Anointing Makes the Difference",
+    "definitions": [
+      [
+        "Anointed",
+        "Empowered or made effective for God’s purposes by the special activity of the Holy Spirit"
+      ]
+    ],
+    "readings": [
+      [
+        "Monday",
+        "Acts 19:1-22"
+      ],
+      [
+        "Tuesday",
+        "Luke 4"
+      ],
+      [
+        "Wednesday",
+        "Isaiah 61"
+      ],
+      [
+        "Thursday",
+        "Acts 10"
+      ],
+      [
+        "Friday",
+        "Mark 6:1-13"
+      ]
+    ],
+    "thought": "For many are called, but few are chosen.",
+    "thoughtCite": "Matthew 22:14 (KJV)",
+    "date": "2023-04-16"
+  },
+  {
+    "slug": "love-is",
+    "word": "Love Is…",
+    "definitions": [],
+    "readings": [
+      [
+        "Monday",
+        "1 Corinthians 13"
+      ],
+      [
+        "Tuesday",
+        "Colossians 1"
+      ],
+      [
+        "Wednesday",
+        "Matthew 18"
+      ],
+      [
+        "Thursday",
+        "John 4:7-21"
+      ],
+      [
+        "Friday",
+        "Romans 12"
+      ]
+    ],
+    "thought": "What does love look like? It has the hands to help others. It has the feet to hasten to the poor and needy. It has eyes to see misery and want. It has the ears to hear the sighs and sorrows of men. That is what love looks like.",
+    "thoughtCite": "Augustine",
+    "secondThought": {
+      "text": "Love recognizes no barriers.",
+      "cite": "Maya Angelou"
+    },
+    "date": "2023-04-23"
+  },
+  {
+    "slug": "wait-on-the-lord",
+    "word": "Wait on the Lord, Be of Good Courage",
+    "definitions": [
+      [
+        "Wait",
+        "To stay or rest in expectation; to stop or remain stationary, till the arrival of some person or event."
+      ],
+      [
+        "Good",
+        "Being positive or desirable in nature; not bad or poor"
+      ],
+      [
+        "Courage",
+        "Bravery; intrepidity; that quality of mind which enables men to encounter danger and difficulties with firmness, or without fear or depression of spirits; valor; boldness; resolution."
+      ]
+    ],
+    "readings": [
+      [
+        "Monday",
+        "Psalm 27"
+      ],
+      [
+        "Tuesday",
+        "Psalm 37"
+      ],
+      [
+        "Wednesday",
+        "Psalm 62"
+      ],
+      [
+        "Thursday",
+        "Isaiah 40"
+      ],
+      [
+        "Friday",
+        "2 Peter 3:8 & Habakkuk 2:1-4"
+      ]
+    ],
+    "thought": "For since the beginning of the world men have not heard, nor perceived by the ear, neither hath the eye seen, O God, beside thee, what he hath prepared for him that waiteth for him.",
+    "thoughtCite": "Isaiah 64:4 (KJV)",
+    "date": "2023-04-30"
+  },
+  {
+    "slug": "battle-ground",
+    "word": "Battle Ground",
+    "definitions": [
+      [
+        "Battle ground",
+        "A place where a battle is fought"
+      ]
+    ],
+    "readings": [
+      [
+        "Monday",
+        "Joshua 8"
+      ],
+      [
+        "Tuesday",
+        "1 Samuel 30"
+      ],
+      [
+        "Wednesday",
+        "2 Chronicles 25"
+      ],
+      [
+        "Thursday",
+        "1 Samuel 7:3-17"
+      ],
+      [
+        "Friday",
+        "Judges 20"
+      ]
+    ],
+    "thought": "When thou goest out to battle against thine enemies, and seest horses, and chariots, and a people more than thou, be not afraid of them: for the LORD thy God is with thee, which brought thee up out of the land of Egypt.",
+    "thoughtCite": "Deuteronomy 20:1 (KJV)",
+    "date": "2023-05-07"
+  },
+  {
+    "slug": "ive-been-expecting-you",
+    "word": "I've Been Expecting You",
+    "definitions": [
+      [
+        "Been",
+        "To have, maintain, or occupy a place, situation, or position."
+      ],
+      [
+        "Expecting",
+        "Believe that (someone or something) will arrive soon."
+      ],
+      [
+        "Expecting",
+        "To anticipate or look forward to the coming or occurrence of."
+      ]
+    ],
+    "readings": [
+      [
+        "Monday",
+        "Luke 15:11-32"
+      ],
+      [
+        "Tuesday",
+        "John 4:1-42"
+      ],
+      [
+        "Wednesday",
+        "1 Samuel 9 & 1 Samuel 10"
+      ],
+      [
+        "Thursday",
+        "Exodus 3"
+      ],
+      [
+        "Friday",
+        "Matthew 25:1-13"
+      ]
+    ],
+    "thought": "To wait with expectancy, means to wait with intention.",
+    "date": "2023-08-20"
+  },
+  {
+    "slug": "jehovah-shammah",
+    "word": "Jehovah Shammah",
+    "subtitle": "The Lord Is There",
+    "definitions": [
+      [
+        "Jehovah Shammah",
+        "Means the Lord is there"
+      ]
+    ],
+    "readings": [
+      [
+        "Monday",
+        "Deuteronomy 31:1-23"
+      ],
+      [
+        "Tuesday",
+        "Daniel 6"
+      ],
+      [
+        "Wednesday",
+        "Psalm 34"
+      ],
+      [
+        "Thursday",
+        "Psalm 23"
+      ],
+      [
+        "Friday",
+        "Isaiah 41:1-20"
+      ]
+    ],
+    "thought": "Jehovah-Shammah is the God who is here for all of us who cry out, today, tomorrow, and forever. This name promises his presence.",
+    "date": "2023-05-14"
+  },
+  {
+    "slug": "spiritual-warfare",
+    "word": "Spiritual Warfare",
+    "definitions": [
+      [
+        "Spiritual",
+        "Of, relating to, consisting of, or having the nature of spirit; not material; supernatural. Of, concerned with, or affecting the soul."
+      ],
+      [
+        "Warfare",
+        "The activity of fighting a war, especially using particular weapons or methods"
+      ]
+    ],
+    "readings": [
+      [
+        "Monday",
+        "Daniel 10"
+      ],
+      [
+        "Tuesday",
+        "Galatians 5"
+      ],
+      [
+        "Wednesday",
+        "2 Corinthians 10"
+      ],
+      [
+        "Thursday",
+        "Jude 1"
+      ],
+      [
+        "Friday",
+        "2 Corinthians 4"
+      ]
+    ],
+    "thought": "The loyalty of the Soldier is proved in battle.",
+    "thoughtCite": "Martin Luther",
+    "date": "2023-05-21"
+  },
+  {
+    "slug": "beware-of-complacency",
+    "word": "Beware of Complacency",
+    "definitions": [
+      [
+        "Beware",
+        "Be cautious and alert to the dangers of"
+      ],
+      [
+        "Complacency",
+        "A feeling of smug or uncritical satisfaction with oneself or one's achievements"
+      ]
+    ],
+    "readings": [
+      [
+        "Monday",
+        "Deuteronomy 4:25-40"
+      ],
+      [
+        "Tuesday",
+        "Isaiah 32:9-20"
+      ],
+      [
+        "Wednesday",
+        "Revelation 3:1-22"
+      ],
+      [
+        "Thursday",
+        "Jeremiah 9:23-25"
+      ],
+      [
+        "Friday",
+        "Luke 21:1-36"
+      ]
+    ],
+    "thought": "Complacency is a deadly foe of all spiritual growth.",
+    "thoughtCite": "A.W. Tozer",
+    "date": "2023-05-28"
+  },
+  {
+    "slug": "are-you-still-in-the-will-of-god",
+    "word": "Are You Still in the Will of God?",
+    "definitions": [
+      [
+        "Still",
+        "Remaining in place or at rest. Staying in the same position. Not moving."
+      ],
+      [
+        "Will",
+        "As one wishes: as or when it pleases or suits oneself."
+      ]
+    ],
+    "readings": [
+      [
+        "Monday",
+        "1 Samuel 4 & 1 Samuel 5"
+      ],
+      [
+        "Tuesday",
+        "1 Samuel 6 & 1 Samuel 7"
+      ],
+      [
+        "Wednesday",
+        "Numbers 14"
+      ],
+      [
+        "Thursday",
+        "2 Kings 22"
+      ],
+      [
+        "Friday",
+        "Genesis 30 & Genesis 31"
+      ]
+    ],
+    "thought": "To live outside of God's will puts us in danger; to live in his will makes us dangerous.",
+    "thoughtCite": "Erwin McManus",
+    "date": "2023-06-04"
+  },
+  {
+    "slug": "dont-get-distracted",
+    "word": "Don't Get Distracted",
+    "definitions": [
+      [
+        "Don't",
+        "Do not"
+      ],
+      [
+        "Distracted",
+        "Unable to concentrate because one's mind is preoccupied."
+      ],
+      [
+        "Distracted",
+        "To cause to feel worried or uneasy; unsettle."
+      ]
+    ],
+    "readings": [
+      [
+        "Monday",
+        "Genesis 4:1-16"
+      ],
+      [
+        "Tuesday",
+        "2 Samuel 11"
+      ],
+      [
+        "Wednesday",
+        "Nehemiah 4"
+      ],
+      [
+        "Thursday",
+        "Matthew 14:22-23"
+      ],
+      [
+        "Friday",
+        "Matthew 4:1-11"
+      ]
+    ],
+    "thought": "Distractions destroy action. If it’s not moving you towards your purpose, leave it alone.",
+    "thoughtCite": "Jermaine Riley",
+    "date": "2023-06-11"
   }
 ]

@@ -178,3 +178,7 @@ details summary{cursor:pointer;font-weight:700;margin:6px 0 12px}
 .day-row{display:grid;grid-template-columns:130px 1fr;gap:10px}
 .day-row.optional input{opacity:.75}
 .study-form label{display:grid;gap:6px;margin-bottom:14px}
+.day-row{grid-template-columns:110px 1fr 1fr}
+.cols.tight{gap:18px}
+.study-form h3{font-size:15px;margin:0 0 8px}
+@media (max-width:900px){.day-row{grid-template-columns:1fr 1fr}.day-row input:first-child{grid-column:1/-1}}
