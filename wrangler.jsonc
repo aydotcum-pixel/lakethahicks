@@ -14,8 +14,13 @@
   "vars": {
     "SITE_URL": "https://www.lakethahicks.com",
     "SITE_TZ": "America/Chicago",
-    // Preview mode: keep search engines out until launch. Set to "0" when going live.
-    "NOINDEX": "1"
+    // Live: search engines welcome. Set to "1" to hide the site from search again.
+    "NOINDEX": "0"
   },
+  "routes": [
+    { "pattern": "www.lakethahicks.com", "custom_domain": true },
+    { "pattern": "lakethahicks.com", "custom_domain": true },
+    { "pattern": "new.lakethahicks.com", "custom_domain": true }
+  ],
   "observability": { "enabled": true }
 }
