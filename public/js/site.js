@@ -107,8 +107,9 @@
       g.appendChild(mk('path', { class: 'leaf', d: 'M0 0 C6 -5 15 -5 21 0 C15 5 6 5 0 0Z', transform: `rotate(${out * 58})` }));
       if (i % 3 !== 1) {
         const b = mk('g', { class: 'bloom', transform: `translate(${out * 7} ${out * -9}) scale(${(0.9 + (i % 4) * .18).toFixed(2)})` });
-        for (let k = 0; k < 5; k++) { const a = k * 72 * Math.PI / 180; b.appendChild(mk('ellipse', { cx: (Math.cos(a) * 4.6).toFixed(2), cy: (Math.sin(a) * 4.6).toFixed(2), rx: 4, ry: 3, fill: cols[(i + k) % 4], transform: `rotate(${k * 72} ${(Math.cos(a) * 4.6).toFixed(2)} ${(Math.sin(a) * 4.6).toFixed(2)})` })); }
-        b.appendChild(mk('circle', { r: 2.2, fill: '#e2c27a' }));
+        const sw = mk('g', { class: 'sway', style: `--bz:${(5.8 + (i % 5) * .55).toFixed(1)}s;--bd:${(-(s / len) * 2.4).toFixed(2)}s` }); b.appendChild(sw);
+        for (let k = 0; k < 5; k++) { const a = k * 72 * Math.PI / 180; sw.appendChild(mk('ellipse', { cx: (Math.cos(a) * 4.6).toFixed(2), cy: (Math.sin(a) * 4.6).toFixed(2), rx: 4, ry: 3, fill: cols[(i + k) % 4], transform: `rotate(${k * 72} ${(Math.cos(a) * 4.6).toFixed(2)} ${(Math.sin(a) * 4.6).toFixed(2)})` })); }
+        sw.appendChild(mk('circle', { r: 2.2, fill: '#e2c27a' }));
         g.appendChild(b);
       }
       svg.appendChild(g);
@@ -127,13 +128,14 @@
     let stem, len = 0, nodes = [];
     const PETALS = ['#2451c7', '#3b6fe0', '#5b8def', '#9cc0ff'];
     function blossom(c) {
-      const g = el('g', { class: 'bloom' });
+      const outer = el('g', { class: 'bloom' }), g = el('g', { class: 'sway', style: `--bz:${(5.5 + Math.random() * 3).toFixed(1)}s;--bd:${(-Math.random() * 8).toFixed(1)}s` });
+      outer.appendChild(g);
       for (let i = 0; i < 5; i++) {
         const a = i * 72 * Math.PI / 180;
         g.appendChild(el('ellipse', { cx: (Math.cos(a) * 5.2).toFixed(2), cy: (Math.sin(a) * 5.2).toFixed(2), rx: 4.6, ry: 3.4, fill: c, transform: `rotate(${i * 72} ${(Math.cos(a) * 5.2).toFixed(2)} ${(Math.sin(a) * 5.2).toFixed(2)})` }));
       }
       g.appendChild(el('circle', { r: 2.6, fill: '#e2c27a' }));
-      return g;
+      return outer;
     }
     function build() {
       vineSvg.innerHTML = '';

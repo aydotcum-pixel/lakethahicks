@@ -58,8 +58,14 @@
 
   // ------------------------------------------------------------------ perches
   const PERCH_SEL = '[data-perch], main .h2, main .display, .post-card-img, .arch, .shelf-title, .book3d, .word-card, .review, .study-card, .def-card';
+  const FLOWERS = '.arch-vine .vine-node.open .bloom, [data-vine] .vine-node.open .bloom';
   function perches() {
     const out = [];
+    for (const el of document.querySelectorAll(FLOWERS)) {   // flowers first: they love the vine
+      const r = el.getBoundingClientRect();
+      if (r.width < 4 || r.bottom < 80 || r.top > innerHeight - 30) continue;
+      out.push({ x: r.left + r.width / 2 + scrollX, y: r.top + r.height * .35 + scrollY, w: 0, el, flower: true });
+    }
     for (const el of document.querySelectorAll(PERCH_SEL)) {
       const r = el.getBoundingClientRect();
       if (r.width < 60 || r.bottom < 70 || r.top > innerHeight - 30) continue;
@@ -74,7 +80,8 @@
     const ps = perches();
     for (let k = 0; k < 18 && ps.length; k++) {
       const p = ps[(Math.random() * ps.length) | 0];
-      const x = p.x + p.w * rnd(.1, .9), y = p.y + 2;
+      if (!p.flower && ps.some(q => q.flower) && Math.random() < .45) continue;   // favour flowers when there are some
+      const x = p.x + p.w * rnd(.1, .9), y = p.y + (p.flower ? 0 : 2);
       if (y - scrollY < 90) continue;
       const crowded = flock.some(b => {
         const t = b.goal || b;
@@ -82,7 +89,7 @@
       });
       if (crowded) continue;
       if (avoid && Math.hypot(x - avoid.x, y - avoid.y) < 180) continue;
-      return { x, y, kind: 'perch' };
+      return { x, y, kind: p.flower ? 'flower' : 'perch', el: p.el };
     }
     return null;
   }
@@ -119,7 +126,13 @@
   function setGoal(b, goal, mode) {
     b.goal = goal; b.mode = mode || 'travel'; b.t = 0;
   }
+  function nodFlower(el) {
+    if (!el) return;
+    el.classList.remove('visited'); void el.getBoundingClientRect(); el.classList.add('visited');
+    setTimeout(() => el.classList.remove('visited'), 1200);
+  }
   function takeOff(b, from, flee) {
+    if (b.flowerEl) { nodFlower(b.flowerEl); b.flowerEl = null; }
     b.mode = flee ? 'flee' : 'wander';
     b.goal = null; b.t = 0; b.flapping = true; b.burst = rnd(.6, 1.2);
     const ang = from ? Math.atan2(b.y - from.y, b.x - from.x) : rnd(-Math.PI * .9, -Math.PI * .1);
@@ -230,6 +243,8 @@
     b.mode = 'rest'; b.vx = b.vy = 0;
     if (b.goal) { b.x = b.goal.x; b.y = b.goal.y; }
     b.onPointer = b.goal && b.goal.kind === 'pointer';
+    b.flowerEl = b.goal && b.goal.el || null;
+    nodFlower(b.flowerEl);
     b.goal = null; b.restPhase = 'closing'; b.restT = 0; b.restDur = rnd(.5, .8);
     b.restHeading = rnd(-.45, .45) + (b.onPointer ? 0 : 0);
     b.rollSign = Math.random() < .5 ? 1 : -1;
@@ -362,6 +377,8 @@
     release: (cx, cy, opts) => release(cx + scrollX, cy + scrollY, opts),
     flutter: (cx, cy, n = 9) => { for (let i = 0; i < n; i++) setTimeout(() => release(cx + scrollX + rnd(-40, 40), cy + scrollY, { burst: true }), i * 80); },
     count: () => flock.length,
+    wind: () => wind,
+    positions: () => flock.map(b => ({ x: b.x - scrollX, y: (b.drawY ?? b.y) - scrollY, vx: b.vx, vy: b.vy, flying: b.mode !== 'rest' })),
   };
   const start = () => setTimeout(() => seedResting(document.querySelector('.hero') ? (small ? 2 : 3) : (small ? 1 : 2)), 1200);
   if (document.readyState === 'complete') start(); else addEventListener('load', start);
