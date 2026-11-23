@@ -10,14 +10,20 @@
   // ---------------------------------------------------------------- mobile menu
   const toggle = $('.menu-toggle'), nav = $('#site-nav'), header = $('.site-header');
   if (toggle && nav) {
-    const setTop = () => document.documentElement.style.setProperty('--nav-top', header.getBoundingClientRect().bottom + 'px');
-    toggle.addEventListener('click', () => {
+    const root = document.documentElement;
+    const setTop = () => root.style.setProperty('--nav-top', Math.max(0, header.getBoundingClientRect().bottom) + 'px');
+    const setOpen = open => {
+      root.classList.toggle('menu-open', open);   // pins the header first, then measure
       setTop();
-      const open = toggle.getAttribute('aria-expanded') !== 'true';
       toggle.setAttribute('aria-expanded', open);
+      toggle.querySelector('.sr').textContent = open ? 'Close menu' : 'Menu';
       nav.classList.toggle('open', open);
-    });
-    addEventListener('keydown', e => { if (e.key === 'Escape' && nav.classList.contains('open')) { toggle.click(); toggle.focus(); } });
+    };
+    toggle.addEventListener('click', () => setOpen(toggle.getAttribute('aria-expanded') !== 'true'));
+    nav.addEventListener('click', e => { if (e.target.closest('a')) setOpen(false); });
+    addEventListener('keydown', e => { if (e.key === 'Escape' && nav.classList.contains('open')) { setOpen(false); toggle.focus(); } });
+    addEventListener('resize', () => { if (nav.classList.contains('open')) { if (innerWidth > 1060) setOpen(false); else setTop(); } });
+    addEventListener('pageshow', () => setOpen(false));
   }
 
   // ---------------------------------------------------------------- reveal on scroll
