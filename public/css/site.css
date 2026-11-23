@@ -288,7 +288,7 @@ a:hover .more{gap:12px}
 /* ---------- post cards */
 .post-card{display:flex;flex-direction:column;background:var(--paper);border:1px solid var(--line);border-radius:24px;overflow:hidden;text-decoration:none;color:var(--text)}
 .post-card-img{display:block;height:230px;background:var(--mist)}
-.post-card-img img{width:100%;height:100%;object-fit:cover;object-position:50% 30%}
+.post-card-img img{width:100%;height:100%;object-fit:cover;object-position:50% 18%}
 .post-card-fallback{display:grid;place-items:center;height:100%}
 .post-card-body{display:flex;flex-direction:column;gap:12px;padding:28px 30px 32px;flex:1}
 .meta{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;font:700 12px/1.2 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--gold-text)}
@@ -1286,3 +1286,13 @@ body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:200;op
 .press-links{display:flex;flex-direction:column;align-items:flex-end;gap:.25rem}
 @media (max-width:900px){.press-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:520px){.press-grid.two{grid-template-columns:repeat(2,minmax(0,1fr))}.press-item figcaption{flex-direction:column}.press-links{align-items:flex-start;flex-direction:row;gap:1rem}}
+
+/* polish, 2026-11-23 */
+.center .kicker,.center>.kicker{justify-content:center}
+.covers-intro{margin-bottom:56px}.covers-intro .btn{margin-top:22px}
+.contact-card .footer-social{margin-top:4px}
+@media (max-width:640px){
+  .page-head-art{align-self:center!important;width:100%;display:flex!important;justify-content:center}
+  .covers-intro{margin-bottom:40px}
+}
+.contact-card .footer-social a{font:inherit;margin:0;color:var(--gold-light)}
