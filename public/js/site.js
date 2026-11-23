@@ -305,6 +305,11 @@
   $$('[data-copy]').forEach(b => b.addEventListener('click', async () => {
     try { await navigator.clipboard.writeText(b.dataset.copy); b.textContent = 'Link copied'; } catch { b.textContent = b.dataset.copy; }
   }));
+  $$('[data-copy-text]').forEach(b => b.addEventListener('click', async () => {
+    const el = document.getElementById(b.dataset.copyText); if (!el) return;
+    const t = [...el.querySelectorAll('p')].map(p => p.textContent).join('\n\n') || el.textContent;
+    try { await navigator.clipboard.writeText(t); b.textContent = 'Copied'; setTimeout(() => { b.textContent = 'Copy'; }, 2000); } catch { const r = document.createRange(); r.selectNodeContents(el); const s = getSelection(); s.removeAllRanges(); s.addRange(r); }
+  }));
 })();
 
 // ---------------------------------------------------------------- weekly study: mark days read (kept on this device)
