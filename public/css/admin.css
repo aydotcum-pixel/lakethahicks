@@ -156,6 +156,7 @@ details summary{cursor:pointer;font-weight:700;margin:6px 0 12px}
 /* ---------- inbox */
 .msg header{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:8px}
 .msg.unread{border-color:#c9d7f5;box-shadow:inset 4px 0 0 var(--blue)}
+.spam-tag{color:#9a5b00;background:#fff3d6;border-radius:6px;padding:1px 7px;font-weight:600;font-size:12px}
 .msg-body{white-space:normal;font-size:15.5px;margin:10px 0 16px;color:var(--text-2)}
 .msg-actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
 .msg-actions form{margin:0}
