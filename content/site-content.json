@@ -83,7 +83,8 @@
           "Transformation and rebirth: the emotional and spiritual metamorphosis that comes before we emerge into the beauty the world sees."
         ]
       ],
-      "coverCredit": "Drawn by her youngest sibling, Lola, who designed the cover with her."
+      "coverCredit": "Drawn by her youngest sibling, Lola, who designed the cover with her.",
+      "buyUrlChecked": "Laketha confirmed the buy link works, 2026-11-23"
     },
     {
       "slug": "redemptions-journey",
@@ -115,7 +116,8 @@
           "Who she is, coming into full bloom: rebirth, beginning anew."
         ]
       ],
-      "coverCredit": "Designed by Laketha and her youngest sibling, Lola."
+      "coverCredit": "Designed by Laketha and her youngest sibling, Lola.",
+      "buyUrlChecked": "Laketha confirmed the buy link works, 2026-11-23"
     },
     {
       "slug": "bloom-where-you-were-bound",
@@ -195,8 +197,8 @@
     "upcomingEvents": []
   },
   "faq": {
-    "needsApproval": true,
-    "note": "Questions are from her live FAQ page; answers were written from known facts and should be checked by Laketha.",
+    "needsApproval": false,
+    "note": "Questions are from her live FAQ page. Answers approved by Laketha on 2026-11-23.",
     "items": [
       [
         "Where can I buy Laketha's books?",
