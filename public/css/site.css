@@ -1056,3 +1056,5 @@ body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:200;op
   .how-study{gap:26px}
   .hs-t{font-size:24px}
 }
+/* sticky side columns only when the layout really has two columns side by side */
+@media (max-width:1024px){.sticky{position:static;top:auto}}
