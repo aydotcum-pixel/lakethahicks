@@ -168,8 +168,8 @@
     ]
   ],
   "speaking": {
-    "needsApproval": true,
-    "note": "Her live site lists these as draft topics not yet approved. No events, dates, venues or fees are set.",
+    "needsApproval": false,
+    "note": "Topics approved by Laketha on 2026-11-23. No events, dates, venues or fees are set.",
     "topics": [
       [
         "Faith for the season you are in",
