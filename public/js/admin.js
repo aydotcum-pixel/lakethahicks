@@ -155,3 +155,13 @@
     e.target.value = '';
   });
 })();
+
+// phone menu for the studio
+(function () {
+  const side = document.querySelector('.side'), btn = document.querySelector('.side-toggle');
+  if (!side || !btn) return;
+  const set = open => { side.classList.toggle('open', open); btn.setAttribute('aria-expanded', open); btn.querySelector('.st-label').textContent = open ? 'Close' : 'Menu'; };
+  btn.addEventListener('click', () => set(!side.classList.contains('open')));
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') set(false); });
+  addEventListener('resize', () => { if (innerWidth > 900) set(false); });
+})();
