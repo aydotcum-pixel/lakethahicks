@@ -189,10 +189,12 @@
       ]
     ],
     "audiences": [
-      "Churches",
-      "Women's groups",
-      "Book clubs",
-      "Community groups"
+      "Conferences and events",
+      "Workplaces and healthcare",
+      "Schools and colleges",
+      "Churches and ministries",
+      "Women's gatherings",
+      "Book clubs and community"
     ],
     "upcomingEvents": []
   },
