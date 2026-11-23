@@ -1,5 +1,5 @@
 {
-  "_sources": "Facts below come from lakethahicks.com as of 2026-11-19 unless marked otherwise. Items marked needsApproval were drafted for her and are NOT yet approved by Laketha.",
+  "_sources": "Facts below come from lakethahicks.com as of 2026-11-19 unless marked otherwise. Items marked needsApproval were drafted for her and are NOT yet approved by Laketha. On 2026-11-22 Laketha sent her own document (why she wrote the series, beginning again, the meaning of the covers, and reader reviews); cover meanings and reviews below come from it.",
   "author": {
     "name": "Laketha Hicks",
     "tagline": "Rooted in faith, written with purpose.",
@@ -12,16 +12,34 @@
     "conviction": "Redemption is not just a moment. It is a journey, walked by faith, one honest step at a time.",
     "career": "Coordinator of Operations, Environmental Services, Huntsville Hospital, February 2007 to present: main campus, Huntsville Hospital for Women & Children, and affiliated North Alabama hospitals (Madison, Athens Limestone, Helen Keller, Decatur). Superior Performance Ratings for fifteen consecutive years.",
     "education": [
-      { "school": "Alabama A&M University", "credential": "B.S. in Accounting", "year": "2006" },
-      { "school": "Florida Institute of Technology", "credential": "MBA, Magna cum Laude, GPA 3.91", "year": "2011" },
-      { "school": "Florida Institute of Technology", "credential": "MPA, Magna cum Laude, GPA 3.88", "year": "2012" },
-      { "school": "Walden University", "credential": "DBA coursework", "year": "2019 to 2020" }
+      {
+        "school": "Alabama A&M University",
+        "credential": "B.S. in Accounting",
+        "year": "2006"
+      },
+      {
+        "school": "Florida Institute of Technology",
+        "credential": "MBA, Magna cum Laude, GPA 3.91",
+        "year": "2011"
+      },
+      {
+        "school": "Florida Institute of Technology",
+        "credential": "MPA, Magna cum Laude, GPA 3.88",
+        "year": "2012"
+      },
+      {
+        "school": "Walden University",
+        "credential": "DBA coursework",
+        "year": "2019 to 2020"
+      }
     ],
     "certifications": [
       "Graduate Certificate in Human Resource Management",
       "Lean Pro Certificate (Six Sigma), Florida Institute of Technology",
       "Tax Theory & Return Preparation, H&R Block"
-    ]
+    ],
+    "writingStory": "Began writing in fourth grade with a Thanksgiving poem the class loved; spent years writing skits, poems and cards for loved ones. Wrote Book One while in school and working full time on third shift, and planned to tuck it in her closet; her siblings were excited, and her publisher asked for a cliffhanger, which grew the book into a three-part series. (From her own document, 2026-11-22.)",
+    "family": "Her youngest sibling, Lola, drew the Book One cover. Her mother's favourite colour was yellow."
   },
   "books": [
     {
@@ -33,15 +51,35 @@
       "line": "What breaks is not the end of the story.",
       "summary": "A woman's story, told plainly and without flinching: the seasons that undo us, and the grace that meets a woman precisely there.",
       "buyUrl": "https://a.co/d/0iFsQEbC",
-      "formats": ["Paperback", "Kindle"],
+      "formats": [
+        "Paperback",
+        "Kindle"
+      ],
       "signedCopies": "By request via email; no price set yet",
       "cover": "/assets/web/cover-redemption.jpg",
       "coverSymbols": [
-        ["The yellow rose", "Where her face should be, a rose in full bloom: beauty and identity restored, rising out of suffering rather than apart from it."],
-        ["The thorn vines", "Barbed stems cross her back like bindings: the pain, shame and circumstance a woman can find herself wrapped in."],
-        ["The monarch butterflies", "Transformation is already in the air, even while the thorns remain."],
-        ["The dark pool", "She kneels in black water, low but not lost: a woman at the turning point of her story."]
-      ]
+        [
+          "Inspired by the lotus",
+          "The Lord spoke to Laketha about the lotus flower, which grows in muddy water and blooms above the surface: rebirth, resilience and spiritual awakening. She kept it in mind as she designed the cover."
+        ],
+        [
+          "A flower, not a face",
+          "Tamela is not defined by physical features but by a flower in bloom, rising from the murky water so every woman can see herself in her."
+        ],
+        [
+          "Yellow, for her mother",
+          "Yellow was her mother’s favourite colour, so the flower pays homage to her."
+        ],
+        [
+          "The briars",
+          "Everything that held Tamela bound: pain, regret, unforgiveness, doubt, lack of faith and unhealthy relationships."
+        ],
+        [
+          "The butterflies",
+          "Transformation and rebirth: the emotional and spiritual metamorphosis that comes before we emerge into the beauty the world sees."
+        ]
+      ],
+      "coverCredit": "Drawn by her youngest sibling, Lola, who designed the cover with her."
     },
     {
       "slug": "redemptions-journey",
@@ -53,15 +91,27 @@
       "line": "Being set free is the beginning. Learning to walk free is the journey.",
       "summary": "Everything that comes after the rescue: the daily, deliberate work of healing, growing and becoming.",
       "buyUrl": "https://a.co/d/0egfT8L5",
-      "formats": ["Paperback", "Kindle"],
+      "formats": [
+        "Paperback",
+        "Kindle"
+      ],
       "signedCopies": "By request via email; no price set yet",
       "cover": "/assets/web/cover-redemptions-journey.jpg",
       "coverSymbols": [
-        ["The emerald gown", "Deep green, the colour of living things: no longer kneeling, but mid-stride."],
-        ["The breaking vines", "The thorns that bound her are in her hands and snapping at her wrists: freedom seized and walked in."],
-        ["The blossoms", "The thicket that imprisoned her erupts in flower: the past is not erased; it is redeemed."],
-        ["The lifted head", "Bright against the dark: defined not by what held her, but by where she is going."]
-      ]
+        [
+          "Full bloom",
+          "She has begun to flourish, and the growth in her life can be seen by others."
+        ],
+        [
+          "The vines that remain",
+          "No longer bound by some of what held her in Book One, but there is still work to be done."
+        ],
+        [
+          "The silhouette",
+          "Who she is, coming into full bloom: rebirth, beginning anew."
+        ]
+      ],
+      "coverCredit": "Designed by Laketha and her youngest sibling, Lola."
     },
     {
       "slug": "bloom-where-you-were-bound",
@@ -76,38 +126,113 @@
     }
   ],
   "readingCircleQuestions": [
-    ["Beginnings", "What does \"redemption\" mean to you, and did the book change that definition?"],
-    ["The thorns", "The covers show a woman bound by vines. What are the \"thorns\" women carry most quietly, and why do they go unspoken?"],
-    ["Moment vs. journey", "Why does change so often arrive as a process rather than an event? Where have you seen that in your own life?"],
-    ["Faith under pressure", "What sustains belief when circumstances give it nothing to stand on?"],
-    ["Blooming anyway", "In the second cover, the imprisoning vines burst into flower. What might it mean for a painful past to be redeemed rather than erased?"],
-    ["Walking free", "What is one practice, daily, unglamorous, faithful, that helps a person live out a new chapter?"]
+    [
+      "Beginnings",
+      "What does \"redemption\" mean to you, and did the book change that definition?"
+    ],
+    [
+      "The briars",
+      "On the first cover, briars hold her bound: pain, regret, unforgiveness, doubt. Which of these do women carry most quietly, and why do they go unspoken?"
+    ],
+    [
+      "Moment vs. journey",
+      "Why does change so often arrive as a process rather than an event? Where have you seen that in your own life?"
+    ],
+    [
+      "Faith under pressure",
+      "What sustains belief when circumstances give it nothing to stand on?"
+    ],
+    [
+      "Blooming with work still to do",
+      "On the second cover she is in full bloom, yet some vines still hold her. What does it look like to flourish while there is still work to be done?"
+    ],
+    [
+      "Walking free",
+      "What is one practice, daily, unglamorous, faithful, that helps a person live out a new chapter?"
+    ]
   ],
   "speaking": {
     "needsApproval": true,
     "note": "Her live site lists these as draft topics not yet approved. No events, dates, venues or fees are set.",
     "topics": [
-      ["Faith for the season you are in", "Trusting God while you wait."],
-      ["Beginning again is not failure", "Starting where you are, with what you have learned."],
-      ["Redemption, the story and the journey", "From being set free to walking free, day by day."],
-      ["Leading with care", "Service, teams and standards that cannot slip, from nearly two decades in hospital leadership."]
+      [
+        "Faith for the season you are in",
+        "Trusting God while you wait."
+      ],
+      [
+        "Beginning again is not failure",
+        "Starting where you are, with what you have learned."
+      ],
+      [
+        "Redemption, the story and the journey",
+        "From being set free to walking free, day by day."
+      ],
+      [
+        "Leading with care",
+        "Service, teams and standards that cannot slip, from nearly two decades in hospital leadership."
+      ]
     ],
-    "audiences": ["Churches", "Women's groups", "Book clubs", "Community groups"],
+    "audiences": [
+      "Churches",
+      "Women's groups",
+      "Book clubs",
+      "Community groups"
+    ],
     "upcomingEvents": []
   },
   "faq": {
     "needsApproval": true,
     "note": "Questions are from her live FAQ page; answers were written from known facts and should be checked by Laketha.",
     "items": [
-      ["Where can I buy Laketha's books?", "Both books are on Amazon in paperback and Kindle. Signed copies are available by request; write to hello@lakethahicks.com."],
-      ["Which book should I read first?", "Start with Redemption: The Story of a Woman (2020), then Redemptions Journey (2022). Either stands alone, but together they trace the full arc from breaking to blooming."],
-      ["Are the two books a series?", "Yes. Book One tells the story; Book Two walks it out."],
-      ["Who publishes her books?", "Write by Faith Publications."],
-      ["Can our book club or group read them together?", "Please do. Discussion questions are free on the books page, and Laketha welcomes invitations to visit reading circles."],
-      ["How can I contact Laketha about her books?", "Use the contact page or write to hello@lakethahicks.com."]
+      [
+        "Where can I buy Laketha's books?",
+        "Both books are on Amazon in paperback and Kindle. Signed copies are available by request; write to hello@lakethahicks.com."
+      ],
+      [
+        "Which book should I read first?",
+        "Start with Redemption: The Story of a Woman (2020), then Redemptions Journey (2022). Either stands alone, but together they trace the full arc from breaking to blooming."
+      ],
+      [
+        "Are the books a series?",
+        "Yes. What Laketha thought would be one book became the three-part Redemption series. Book One (2020) and Book Two (2022) are available now."
+      ],
+      [
+        "Who publishes her books?",
+        "Write by Faith Publications."
+      ],
+      [
+        "Can our book club or group read them together?",
+        "Please do. Discussion questions are free on the books page, and Laketha welcomes invitations to visit reading circles."
+      ],
+      [
+        "How can I contact Laketha about her books?",
+        "Use the contact page or write to hello@lakethahicks.com."
+      ]
     ]
   },
   "reviews": {
-    "status": "None collected yet. Do NOT invent testimonials, quotes or star ratings. Use an invitation to share instead until real, permissioned quotes exist."
+    "status": "Real reader reviews sent by Laketha on 2026-11-22, shown with readers' initials as she provided them. Confirm readers are happy to be quoted. Still never invent reviews or star ratings.",
+    "items": [
+      [
+        "Tam is so many of us and many of us don’t realize.",
+        "N.H."
+      ],
+      [
+        "What made you write this book, this is my story. I was in an abusive relationship.",
+        "K.H."
+      ],
+      [
+        "All I can say is WOW! It was such an amazing read and points made that I felt lived as a child. You also hit on issues that I totally feel my daughter need to read about and will definitely let her read it because I felt if she applies them she will benefit from them. Thank you again for such an amazing book and I look forward to the next one.",
+        "L.A."
+      ],
+      [
+        "I can’t say enough how I enjoyed your book. I started thinking I would read a few pages and ended up reading it in one sitting. I LOVED it!",
+        "L.A."
+      ],
+      [
+        "This book reminds me of my sister in law’s story. I am going to buy a copy for her too because she needs to read it as well.",
+        "D.D."
+      ]
+    ]
   }
 }

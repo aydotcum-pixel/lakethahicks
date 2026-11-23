@@ -18,7 +18,7 @@ server.listen(0, async () => {
   const get = (p, o = {}) => fetch(base + p, { redirect: 'manual', ...o });
   try {
     console.log('Public pages');
-    for (const p of ['/', '/books', '/books/redemption', '/books/redemptions-journey', '/devotional', '/about', '/speaking', '/journal', '/contact', '/journal/faith-for-the-season-you-are-in', '/journal/rss.xml', '/sitemap.xml', '/robots.txt']) {
+    for (const p of ['/', '/books', '/books/redemption', '/books/redemptions-journey', '/devotional', '/about', '/speaking', '/journal', '/contact', '/journal/faith-for-the-season-you-are-in', '/journal/the-story-behind-the-covers', '/journal/why-i-wrote-redemptions-journey', '/journal/rss.xml', '/sitemap.xml', '/robots.txt']) {
       const r = await get(p); ok(r.status === 200, `${p} → 200`);
     }
     ok((await get('/nope')).status === 404, '/nope → 404');

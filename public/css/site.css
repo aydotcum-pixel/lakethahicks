@@ -954,3 +954,24 @@ body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:200;op
   .grid-2.tight{grid-template-columns:1fr 1fr}
   .mini{padding:16px}.mini b{font-size:20px}
 }
+
+/* ---- reader reviews (real, from Laketha's readers) ---- */
+.reviews{columns:3 300px;column-gap:22px}
+.reviews .review{break-inside:avoid;margin:0 0 22px}
+.review{position:relative;margin:0;background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:34px 32px 28px;display:flex;flex-direction:column;gap:18px;overflow:hidden}
+.review::after{content:"";position:absolute;inset:auto -30px -30px auto;width:120px;height:120px;border-radius:50%;background:radial-gradient(circle,rgba(156,192,255,.28),transparent 70%);pointer-events:none}
+.review-mark{font:italic 600 84px/.6 var(--serif);color:var(--blue);height:30px}
+.review blockquote{margin:0;font:500 21px/1.45 var(--serif);color:var(--ink)}
+.review figcaption{font:700 11px/1 var(--sans);letter-spacing:.28em;text-transform:uppercase;color:var(--gold-text);display:flex;align-items:center;gap:12px}
+.review figcaption::before{content:"";width:28px;height:1px;background:var(--gold)}
+.review:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.home-readers .reviews{columns:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:start}
+.home-readers .review{margin:0}
+.cover-credit{margin-top:22px;font-size:15px;color:var(--muted);font-style:italic}
+.cover-credit a{color:var(--blue);font-style:normal;font-weight:700;margin-left:6px}
+@media (max-width:980px){.home-readers .reviews{grid-template-columns:1fr 1fr}}
+@media (max-width:760px){
+  .review{padding:28px 24px 24px}
+  .review blockquote{font-size:19px}
+  .home-readers .reviews{display:flex}
+}
