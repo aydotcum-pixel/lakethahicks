@@ -1,0 +1,16 @@
+{
+  "name": "laketha-hicks-site",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Laketha Hicks author website, journal and writing studio. Runs on Cloudflare Workers + D1; runs locally on Node 22+.",
+  "main": "server.js",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "start": "node --no-warnings server.js",
+    "dev": "node --no-warnings --watch server.js",
+    "bundle": "node scripts/build-bundle.js",
+    "test": "node --no-warnings scripts/smoke-test.js",
+    "set-password": "node --no-warnings scripts/set-password.js",
+    "deploy": "npm run bundle && npx wrangler deploy"
+  }
+}

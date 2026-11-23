@@ -1,0 +1,9 @@
+/assets/*
+  Cache-Control: public, max-age=2592000
+  X-Content-Type-Options: nosniff
+/css/*
+  Cache-Control: public, max-age=3600
+  X-Content-Type-Options: nosniff
+/js/*
+  Cache-Control: public, max-age=3600
+  X-Content-Type-Options: nosniff

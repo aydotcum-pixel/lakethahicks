@@ -1,0 +1,113 @@
+{
+  "_sources": "Facts below come from lakethahicks.com as of 2026-11-19 unless marked otherwise. Items marked needsApproval were drafted for her and are NOT yet approved by Laketha.",
+  "author": {
+    "name": "Laketha Hicks",
+    "tagline": "Rooted in faith, written with purpose.",
+    "headline": "There is more to your story.",
+    "subhead": "For every woman who has had to begin again. Stories of redemption, told by faith.",
+    "home": "Harvest, Alabama (Huntsville and Madison community)",
+    "email": "hello@lakethahicks.com",
+    "favouriteColour": "blue (per her manager, Chef Ay)",
+    "loves": "butterflies",
+    "conviction": "Redemption is not just a moment. It is a journey, walked by faith, one honest step at a time.",
+    "career": "Coordinator of Operations, Environmental Services, Huntsville Hospital, February 2007 to present: main campus, Huntsville Hospital for Women & Children, and affiliated North Alabama hospitals (Madison, Athens Limestone, Helen Keller, Decatur). Superior Performance Ratings for fifteen consecutive years.",
+    "education": [
+      { "school": "Alabama A&M University", "credential": "B.S. in Accounting", "year": "2006" },
+      { "school": "Florida Institute of Technology", "credential": "MBA, Magna cum Laude, GPA 3.91", "year": "2011" },
+      { "school": "Florida Institute of Technology", "credential": "MPA, Magna cum Laude, GPA 3.88", "year": "2012" },
+      { "school": "Walden University", "credential": "DBA coursework", "year": "2019 to 2020" }
+    ],
+    "certifications": [
+      "Graduate Certificate in Human Resource Management",
+      "Lean Pro Certificate (Six Sigma), Florida Institute of Technology",
+      "Tax Theory & Return Preparation, H&R Block"
+    ]
+  },
+  "books": [
+    {
+      "slug": "redemption",
+      "title": "Redemption: The Story of a Woman",
+      "order": "Book One",
+      "year": 2020,
+      "publisher": "Write by Faith Publications",
+      "line": "What breaks is not the end of the story.",
+      "summary": "A woman's story, told plainly and without flinching: the seasons that undo us, and the grace that meets a woman precisely there.",
+      "buyUrl": "https://a.co/d/0iFsQEbC",
+      "formats": ["Paperback", "Kindle"],
+      "signedCopies": "By request via email; no price set yet",
+      "cover": "/assets/web/cover-redemption.jpg",
+      "coverSymbols": [
+        ["The yellow rose", "Where her face should be, a rose in full bloom: beauty and identity restored, rising out of suffering rather than apart from it."],
+        ["The thorn vines", "Barbed stems cross her back like bindings: the pain, shame and circumstance a woman can find herself wrapped in."],
+        ["The monarch butterflies", "Transformation is already in the air, even while the thorns remain."],
+        ["The dark pool", "She kneels in black water, low but not lost: a woman at the turning point of her story."]
+      ]
+    },
+    {
+      "slug": "redemptions-journey",
+      "title": "Redemptions Journey",
+      "titleNote": "Styled without an apostrophe, as on the published cover",
+      "order": "Book Two",
+      "year": 2022,
+      "publisher": "Write by Faith Publications",
+      "line": "Being set free is the beginning. Learning to walk free is the journey.",
+      "summary": "Everything that comes after the rescue: the daily, deliberate work of healing, growing and becoming.",
+      "buyUrl": "https://a.co/d/0egfT8L5",
+      "formats": ["Paperback", "Kindle"],
+      "signedCopies": "By request via email; no price set yet",
+      "cover": "/assets/web/cover-redemptions-journey.jpg",
+      "coverSymbols": [
+        ["The emerald gown", "Deep green, the colour of living things: no longer kneeling, but mid-stride."],
+        ["The breaking vines", "The thorns that bound her are in her hands and snapping at her wrists: freedom seized and walked in."],
+        ["The blossoms", "The thicket that imprisoned her erupts in flower: the past is not erased; it is redeemed."],
+        ["The lifted head", "Bright against the dark: defined not by what held her, but by where she is going."]
+      ]
+    },
+    {
+      "slug": "bloom-where-you-were-bound",
+      "title": "Bloom Where You Were Bound",
+      "subtitle": "A 30-Day Devotional Journey from Redemption to Purpose",
+      "order": "Companion devotional",
+      "status": "DRAFT manuscript written with Claude on 2026-11-19; not yet reviewed, approved or published by Laketha",
+      "needsApproval": true,
+      "cover": "/assets/web/cover-bloom-where-you-were-bound.png",
+      "manuscript": "/content/devotional/manuscript-source.txt",
+      "days": "/content/devotional/days.json"
+    }
+  ],
+  "readingCircleQuestions": [
+    ["Beginnings", "What does \"redemption\" mean to you, and did the book change that definition?"],
+    ["The thorns", "The covers show a woman bound by vines. What are the \"thorns\" women carry most quietly, and why do they go unspoken?"],
+    ["Moment vs. journey", "Why does change so often arrive as a process rather than an event? Where have you seen that in your own life?"],
+    ["Faith under pressure", "What sustains belief when circumstances give it nothing to stand on?"],
+    ["Blooming anyway", "In the second cover, the imprisoning vines burst into flower. What might it mean for a painful past to be redeemed rather than erased?"],
+    ["Walking free", "What is one practice, daily, unglamorous, faithful, that helps a person live out a new chapter?"]
+  ],
+  "speaking": {
+    "needsApproval": true,
+    "note": "Her live site lists these as draft topics not yet approved. No events, dates, venues or fees are set.",
+    "topics": [
+      ["Faith for the season you are in", "Trusting God while you wait."],
+      ["Beginning again is not failure", "Starting where you are, with what you have learned."],
+      ["Redemption, the story and the journey", "From being set free to walking free, day by day."],
+      ["Leading with care", "Service, teams and standards that cannot slip, from nearly two decades in hospital leadership."]
+    ],
+    "audiences": ["Churches", "Women's groups", "Book clubs", "Community groups"],
+    "upcomingEvents": []
+  },
+  "faq": {
+    "needsApproval": true,
+    "note": "Questions are from her live FAQ page; answers were written from known facts and should be checked by Laketha.",
+    "items": [
+      ["Where can I buy Laketha's books?", "Both books are on Amazon in paperback and Kindle. Signed copies are available by request; write to hello@lakethahicks.com."],
+      ["Which book should I read first?", "Start with Redemption: The Story of a Woman (2020), then Redemptions Journey (2022). Either stands alone, but together they trace the full arc from breaking to blooming."],
+      ["Are the two books a series?", "Yes. Book One tells the story; Book Two walks it out."],
+      ["Who publishes her books?", "Write by Faith Publications."],
+      ["Can our book club or group read them together?", "Please do. Discussion questions are free on the books page, and Laketha welcomes invitations to visit reading circles."],
+      ["How can I contact Laketha about her books?", "Use the contact page or write to hello@lakethahicks.com."]
+    ]
+  },
+  "reviews": {
+    "status": "None collected yet. Do NOT invent testimonials, quotes or star ratings. Use an invitation to share instead until real, permissioned quotes exist."
+  }
+}

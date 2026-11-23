@@ -1,0 +1,21 @@
+{
+  // Laketha Hicks author site: Cloudflare Worker + static assets + D1.
+  // Deploy: npx wrangler deploy   (or connect this repo in Cloudflare → Workers → Builds)
+  "name": "laketha-hicks-site",
+  "main": "worker.js",
+  "compatibility_date": "2025-09-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "workers_dev": true,
+  "preview_urls": true,
+  "assets": { "directory": "./public", "binding": "ASSETS" },
+  "d1_databases": [
+    { "binding": "DB", "database_name": "laketha-hicks-site", "database_id": "bde5e182-db68-4519-8b8a-6cd9b316b79a" }
+  ],
+  "vars": {
+    "SITE_URL": "https://www.lakethahicks.com",
+    "SITE_TZ": "America/Chicago",
+    // Preview mode: keep search engines out until launch. Set to "0" when going live.
+    "NOINDEX": "1"
+  },
+  "observability": { "enabled": true }
+}
