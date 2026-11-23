@@ -50,7 +50,7 @@
 
   // the layer covers the whole page but clips, so a butterfly off the edge never widens it
   let sizeT = 0;
-  const sizeGarden = () => { garden.style.height = document.documentElement.scrollHeight + 'px'; };
+  const sizeGarden = () => { const f = document.querySelector('.site-footer'); garden.style.height = (f ? f.offsetTop + f.offsetHeight : document.body.offsetHeight) + 'px'; };
   sizeGarden(); addEventListener('resize', sizeGarden);
   const flock = [];
   const pointer = { x: -9999, y: -9999, cx: 0, cy: 0, vx: 0, vy: 0, t: 0, still: 0, inside: false, onUI: false };
