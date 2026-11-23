@@ -9,7 +9,6 @@
     "email": "hello@lakethahicks.com",
     "favouriteColour": "blue (per her manager, Chef Ay)",
     "loves": "butterflies",
-    "conviction": "Redemption is not just a moment. It is a journey, walked by faith, one honest step at a time.",
     "career": "Coordinator of Operations, Environmental Services, Huntsville Hospital, February 2007 to present: main campus, Huntsville Hospital for Women & Children, and affiliated North Alabama hospitals (Madison, Athens Limestone, Helen Keller, Decatur). Superior Performance Ratings for fifteen consecutive years.",
     "education": [
       {
@@ -39,7 +38,12 @@
       "Tax Theory & Return Preparation, H&R Block"
     ],
     "writingStory": "Began writing in fourth grade with a Thanksgiving poem the class loved; spent years writing skits, poems and cards for loved ones. Wrote Book One while in school and working full time on third shift, and planned to tuck it in her closet; her siblings were excited, and her publisher asked for a cliffhanger, which grew the book into a three-part series. (From her own document, 2026-11-22.)",
-    "family": "Her youngest sibling, Lola, drew the Book One cover. Her mother's favourite colour was yellow."
+    "family": "Her youngest sibling, Lola, drew the Book One cover. Her mother's favourite colour was yellow.",
+    "herWords": [
+      "If it was up to me no one would have ever read any books in the Redemption series. Thankfully, God had other plans.",
+      "It is never too late to start again.",
+      "As long as you have breath in your lungs you can try again."
+    ]
   },
   "books": [
     {
@@ -48,8 +52,8 @@
       "order": "Book One",
       "year": 2020,
       "publisher": "Write by Faith Publications",
-      "line": "What breaks is not the end of the story.",
-      "summary": "A woman's story, told plainly and without flinching: the seasons that undo us, and the grace that meets a woman precisely there.",
+      "line": "Where Tamela’s story begins.",
+      "summary": "Book One of the Redemption series introduces Tamela, a woman every reader is meant to see herself in.",
       "buyUrl": "https://a.co/d/0iFsQEbC",
       "formats": [
         "Paperback",
@@ -88,8 +92,8 @@
       "order": "Book Two",
       "year": 2022,
       "publisher": "Write by Faith Publications",
-      "line": "Being set free is the beginning. Learning to walk free is the journey.",
-      "summary": "Everything that comes after the rescue: the daily, deliberate work of healing, growing and becoming.",
+      "line": "Tamela in full bloom, with work still to do.",
+      "summary": "Book Two continues Tamela’s story, drawn from Laketha’s own life experiences.",
       "buyUrl": "https://a.co/d/0egfT8L5",
       "formats": [
         "Paperback",
@@ -129,7 +133,7 @@
       "title": "Redemptions Story: The Final Chapters",
       "order": "Book Three",
       "publisher": "Write by Faith Publications",
-      "line": "The final chapters.",
+      "line": "The close of Tamela’s story.",
       "status": "Coming soon. Confirmed by Laketha 2026-11-22; cover shared the same day; no release date yet.",
       "comingSoon": true,
       "cover": "/assets/cover-redemptions-story.jpg"
@@ -145,8 +149,8 @@
       "On the first cover, briars hold her bound: pain, regret, unforgiveness, doubt. Which of these do women carry most quietly, and why do they go unspoken?"
     ],
     [
-      "Moment vs. journey",
-      "Why does change so often arrive as a process rather than an event? Where have you seen that in your own life?"
+      "Moment or process",
+      "Why does change so often come as a process rather than a single event? Where have you seen that in your own life?"
     ],
     [
       "Faith under pressure",
@@ -157,8 +161,8 @@
       "On the second cover she is in full bloom, yet some vines still hold her. What does it look like to flourish while there is still work to be done?"
     ],
     [
-      "Walking free",
-      "What is one practice, daily, unglamorous, faithful, that helps a person live out a new chapter?"
+      "A new chapter",
+      "What is one small, daily practice that helps you live out a new chapter?"
     ]
   ],
   "speaking": {
@@ -175,7 +179,7 @@
       ],
       [
         "Redemption, the story and the journey",
-        "From being set free to walking free, day by day."
+        "The stories behind the Redemption series."
       ],
       [
         "Leading with care",
