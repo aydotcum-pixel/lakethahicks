@@ -16,7 +16,7 @@
  */
 (function () {
   'use strict';
-  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches || /[?&]still\b/.test(location.search);
   const fine = matchMedia('(hover: hover) and (pointer: fine)').matches;
   const small = innerWidth < 760;
   const V = (document.querySelector('script[src*="butterflies.js"]') || {}).src || '';

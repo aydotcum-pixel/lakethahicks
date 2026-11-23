@@ -3,7 +3,7 @@
   'use strict';
   const $ = (s, r = document) => r.querySelector(s);
   const $$ = (s, r = document) => [...r.querySelectorAll(s)];
-  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches || /[?&]still\b/.test(location.search);
   const live = $('[data-live]');
   const say = t => { if (live) { live.textContent = ''; setTimeout(() => (live.textContent = t), 30); } };
 
