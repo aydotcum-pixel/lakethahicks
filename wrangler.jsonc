@@ -17,6 +17,9 @@
     // Live: search engines welcome. Set to "1" to hide the site from search again.
     "NOINDEX": "0"
   },
+  // Emails Laketha about new contact-form messages. The address it goes to is the
+  // ALERT_TO secret (set in Cloudflare → Worker → Settings → Variables and Secrets).
+  "send_email": [{ "name": "MAILER" }],
   "routes": [
     { "pattern": "www.lakethahicks.com", "custom_domain": true },
     { "pattern": "lakethahicks.com", "custom_domain": true },
