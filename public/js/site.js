@@ -178,6 +178,7 @@
     });
   }
   const spawn = (cx, cy, burst) => { if (!reduce) release(cx + scrollX, cy + scrollY, burst); };
+  window.LH = Object.assign(window.LH || {}, { spawn: (x, y) => { for (let i = 0; i < 5; i++) setTimeout(() => spawn(x + (Math.random() - .5) * 80, y, true), i * 90); } });
   $$('[data-release]').forEach(b => b.addEventListener('click', async e => {
     const r = b.getBoundingClientRect();
     const x = e.clientX || r.left + r.width / 2, y = e.clientY || r.top + r.height / 2;
@@ -316,6 +317,8 @@
         if (d) { e.preventDefault(); select(tabs[(i + d + tabs.length) % tabs.length], true); }
       });
     });
+    const want = { '#book-three': 2, '#devotional': 3 }[location.hash];
+    if (want !== undefined && tabs[want]) { select(tabs[want]); setTimeout(() => list.scrollIntoView({ block: 'start' }), 60); }
   });
 
   // ---------------------------------------------------------------- journal filter
@@ -416,4 +419,36 @@
   $$('[data-copy]').forEach(b => b.addEventListener('click', async () => {
     try { await navigator.clipboard.writeText(b.dataset.copy); b.textContent = 'Link copied'; } catch { b.textContent = b.dataset.copy; }
   }));
+})();
+
+// ---------------------------------------------------------------- weekly study: mark days read (kept on this device)
+(function () {
+  const plan = document.querySelector('[data-plan]');
+  if (!plan) return;
+  const key = 'lh-study-' + plan.dataset.plan;
+  let done = [];
+  try { done = JSON.parse(localStorage.getItem(key) || '[]'); } catch (e) { done = []; }
+  const boxes = [...plan.querySelectorAll('[data-plan-check]')];
+  const prog = document.querySelector('[data-plan-progress]');
+  const update = () => {
+    const n = boxes.filter(b => b.checked).length;
+    boxes.forEach(b => b.closest('.plan-day').classList.toggle('done', b.checked));
+    if (prog) {
+      prog.querySelector('.pp-bar span').style.width = (n / boxes.length * 100) + '%';
+      prog.querySelector('.pp-text').textContent = n === boxes.length ? 'All ' + n + ' days read. Well done.' : n + ' of ' + boxes.length + ' read';
+      prog.classList.toggle('complete', n === boxes.length);
+    }
+  };
+  boxes.forEach(b => {
+    b.checked = done.includes(+b.dataset.planCheck);
+    b.addEventListener('change', () => {
+      const d = boxes.filter(x => x.checked).map(x => +x.dataset.planCheck);
+      try { localStorage.setItem(key, JSON.stringify(d)); } catch (e) { /* private mode */ }
+      update();
+      if (b.checked && boxes.every(x => x.checked) && window.LH && window.LH.spawn) {
+        const r = b.getBoundingClientRect(); window.LH.spawn(r.left + r.width / 2, r.top);
+      }
+    });
+  });
+  update();
 })();

@@ -123,6 +123,16 @@
       "cover": "/assets/web/cover-bloom-where-you-were-bound.png",
       "manuscript": "/content/devotional/manuscript-source.txt",
       "days": "/content/devotional/days.json"
+    },
+    {
+      "slug": "redemptions-story",
+      "title": "Redemptions Story: The Final Chapters",
+      "order": "Book Three",
+      "publisher": "Write by Faith Publications",
+      "line": "The final chapters.",
+      "status": "Coming soon. Confirmed by Laketha 2026-11-22; cover shared the same day; no release date yet.",
+      "comingSoon": true,
+      "cover": "/assets/cover-redemptions-story.jpg"
     }
   ],
   "readingCircleQuestions": [
@@ -194,7 +204,7 @@
       ],
       [
         "Are the books a series?",
-        "Yes. What Laketha thought would be one book became the three-part Redemption series. Book One (2020) and Book Two (2022) are available now."
+        "Yes. What Laketha thought would be one book became the three-part Redemption series. Book One (2020) and Book Two (2022) are available now, and Book Three is on its way."
       ],
       [
         "Who publishes her books?",
@@ -211,7 +221,7 @@
     ]
   },
   "reviews": {
-    "status": "Real reader reviews sent by Laketha on 2026-11-22, shown with readers' initials as she provided them. Confirm readers are happy to be quoted. Still never invent reviews or star ratings.",
+    "status": "Real reader reviews sent by Laketha on 2026-11-22, shown with readers' initials as she provided them. Laketha confirmed (2026-11-22) she is happy for them to be shown, including K.H. Never invent reviews or star ratings.",
     "items": [
       [
         "Tam is so many of us and many of us don’t realize.",

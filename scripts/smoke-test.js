@@ -18,7 +18,7 @@ server.listen(0, async () => {
   const get = (p, o = {}) => fetch(base + p, { redirect: 'manual', ...o });
   try {
     console.log('Public pages');
-    for (const p of ['/', '/books', '/books/redemption', '/books/redemptions-journey', '/devotional', '/about', '/speaking', '/journal', '/contact', '/journal/faith-for-the-season-you-are-in', '/journal/the-story-behind-the-covers', '/journal/why-i-wrote-redemptions-journey', '/journal/rss.xml', '/sitemap.xml', '/robots.txt']) {
+    for (const p of ['/', '/books', '/books/redemption', '/books/redemptions-journey', '/devotional', '/about', '/speaking', '/journal', '/contact', '/journal/faith-for-the-season-you-are-in', '/journal/the-story-behind-the-covers', '/studies', '/studies/chosen', '/journal/why-i-wrote-redemptions-journey', '/journal/rss.xml', '/sitemap.xml', '/robots.txt']) {
       const r = await get(p); ok(r.status === 200, `${p} → 200`);
     }
     ok((await get('/nope')).status === 404, '/nope → 404');
@@ -64,6 +64,16 @@ server.listen(0, async () => {
     ok((await get('/journal/a-test-of-grace')).status === 404, 'drafts are hidden from the public');
     const prev = await (await get('/admin/preview', { method: 'POST', headers: { cookie, 'content-type': 'application/json', 'x-csrf-token': csrf }, body: JSON.stringify({ body: '## Hi' }) })).json();
     ok(prev.html === '<h2>Hi</h2>', 'live preview works');
+    console.log('Weekly studies');
+    const chosen = await (await get('/studies/chosen')).text();
+    ok(chosen.includes('Thought to ponder') && chosen.includes('biblegateway.com/passage/?search=Luke%2019%3A1-10'), 'study page shows thought and Scripture links');
+    ok((await get('/admin/studies', { headers: { cookie } })).status === 200, 'studies list in studio');
+    const sf = new URLSearchParams({ csrf, word: 'Restored', definitions: 'Brought back\nMade new', day0: 'Monday', ref0: 'Joel 2:25-27', day1: 'Tuesday', ref1: 'Psalm 23', thought: 'God restores <b>more</b> than was lost.', status: 'published' });
+    const ss = await get('/admin/studies/save', { method: 'POST', headers: { cookie, 'content-type': 'application/x-www-form-urlencoded' }, body: sf.toString() });
+    ok(ss.status === 303, 'new study saves');
+    const rs = await (await get('/studies/restored')).text();
+    ok(rs.includes('Joel 2:25-27') && !rs.includes('<b>more</b>'), 'new study is live and escaped');
+    ok((await (await get('/studies')).text()).includes('Restored'), 'studies page lists the new study');
     const png = 'data:image/png;base64,' + Buffer.from([0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a, 0, 0, 0, 0]).toString('base64');
     const up = await (await get('/admin/upload', { method: 'POST', headers: { cookie, 'content-type': 'application/json', 'x-csrf-token': csrf }, body: JSON.stringify({ data: png }) })).json();
     ok(/^\/uploads\/[\w-]+\.png$/.test(up.url || ''), 'photo upload works');
