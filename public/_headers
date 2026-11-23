@@ -2,8 +2,8 @@
   Cache-Control: public, max-age=2592000
   X-Content-Type-Options: nosniff
 /css/*
-  Cache-Control: public, max-age=3600
+  Cache-Control: public, max-age=300, must-revalidate
   X-Content-Type-Options: nosniff
 /js/*
-  Cache-Control: public, max-age=3600
+  Cache-Control: public, max-age=300, must-revalidate
   X-Content-Type-Options: nosniff

@@ -1050,3 +1050,9 @@ body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:200;op
   .wc-word{font-size:58px}
   .wc-defs li{font-size:19px}
 }
+@media (max-width:760px){
+  .sf-plan li{grid-template-columns:1fr;gap:6px;padding:14px 18px}
+  .sf-day{letter-spacing:.2em;font-size:10px}
+  .how-study{gap:26px}
+  .hs-t{font-size:24px}
+}
