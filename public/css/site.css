@@ -1297,3 +1297,4 @@ body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:200;op
 }
 .contact-card .footer-social a{font:inherit;margin:0;color:var(--gold-light)}
 .covers-intro .h2{margin-bottom:16px}
+.contact-card p:not(.kicker)+.kicker{margin-top:16px}
